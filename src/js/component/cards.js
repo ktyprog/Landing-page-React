@@ -1,16 +1,30 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export function Cards(){
-    return (
-        <div class="card" style="width: 18rem;">
-          <img src="https://picsum.photos/200/300" className="card-img-top"  alt="Card image cap">
+const Card = props => {
+	return (
+		<div className="card">
+			<img src="..." className="card-img-top" alt="..." />
+			<div className="card-body">
+				<h5 className="card-title">{props.title}</h5>
+				<p className="card-text">
+					Some quick example text to build on the card title and make
+					up the bulk of the cards content.
+				</p>
+				<a href="#" className="btn btn-primary">
+					Go somewhere
+				</a>
+			</div>
+		</div>
+	);
+};
 
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+Card.propTypes = {
+	img: PropTypes.string,
+	title: PropTypes.string,
+	body: PropTypes.string,
+	link: PropTypes.string,
+	buttoncolor: PropTypes.string
+};
 
-          </div>
-        </div>
-    );
-}
+export default Card;

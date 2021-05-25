@@ -1,45 +1,23 @@
 import React from "react";
 
-import { Navbar } from "./Navbar";
-import { Jumbotron } from "./Jumbotron";
-import { Cards } from "./Cards";
-
+import Navbar from "./navbar";
+import Jumbotron from "./jumbotron";
+import Cards from "./cards";
+import Footer from "./footer";
+import CardContainer from "./CardContainer";
 
 //create your first component
 export function Home() {
 	return (
-        <div>
-            <Navbar/>
-		     <div className="container mt-5">
-            <Jumbotron 
-            title="Hello World" 
-            description "It uses utility classes for typography and spacing to space content out within the larger container."
-            buttonLabel= "Learn more"
-            buttonUrl={"www.dot.com"}  }
-            />
-            
-			<div className="row mt-3">
-                <div className="col-sm-3">
-                <Cards/>
-            <div/>
-            <div className="row mt-3">
-                <div className="col-sm-3">
-                <Cards/>
-            <div/>
-            <div className="row mt-3">
-                <div className="col-sm-3">
-                <Cards/>
-            <div/>
-            <div className="row mt-3">
-                <div className="col-sm-3">
-                <Cards/>
-            <div/>
-            <div className="row mt-3">
-                <div className="col-sm-3">
-                <Cards/>
-            <div/>
-        </div>
-    </div>
-
+		<div>
+			<Navbar />
+			<div className="container">
+				<Jumbotron />
+				<CardContainer />
+			</div>
+			<div>
+				<Footer />
+			</div>
+		</div>
 	);
 }
